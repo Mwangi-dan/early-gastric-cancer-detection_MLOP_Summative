@@ -125,3 +125,7 @@ Click below to watch the full walkthrough of the system:
 - **Optimization**: Improve training speed and reduce memory usage.
 - **GPU Support**: Integrate GPU-based model training for faster performance.
 - **Extended Functionality**: Include additional metrics and support for more types of medical imagery.
+
+
+## Author
+[Daniel Ndungu](https://www.linkedin.com/in/daniel-mwangi-68490a236/)
