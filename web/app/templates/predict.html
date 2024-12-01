@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Make a Prediction{% endblock %}
+
+{% block content %}
+<section id="prediction" class="prediction section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Make a Prediction</h2>
+      <p>Upload an endoscopic image and get an instant prediction.</p>
+
+      <!-- Informational Container -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="info-box p-4 shadow-sm rounded">
+          <h4>How the Model Works</h4>
+          <p>
+            Our model leverages advanced machine learning techniques, including convolutional neural networks (CNNs), 
+            to analyze endoscopic images. By identifying subtle patterns and features that may not be visible to the naked eye, 
+            the model classifies images as either "Cancerous" or "Non-Cancerous." This system has been trained on thousands of labeled images, 
+            ensuring high accuracy and reliability within its scope.
+          </p>
+          <h5 class="text-danger">Disclaimer</h5>
+          <p class="text-muted">
+            The predictions provided by this tool are intended for informational purposes only and should not 
+            replace professional medical advice. Always consult a qualified healthcare provider for an official diagnosis 
+            and further evaluation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form action="/predict" method="POST" enctype="multipart/form-data" id="prediction-form" class="form-control">
+          <div class="form-group mb-4">
+            <label for="imageUpload">Upload Endoscopic Image</label>
+            <input type="file" name="image" id="imageUpload" class="form-control" accept="image/*" required>
+          </div>
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit for Prediction</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {% if prediction is not none %}
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8 text-center">
+        <h3>Prediction Results</h3>
+        {% if uploaded_image_url %}
+        <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="img-fluid mb-4">
+        {% endif %}
+        <p><strong>Label:</strong> {{ prediction }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}</p>
+        <a href="/predict" class="btn btn-secondary mt-3">Make Another Prediction</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

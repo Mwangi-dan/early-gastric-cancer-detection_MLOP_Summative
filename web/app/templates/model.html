@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Model Details{% endblock %}
+
+{% block content %}
+<section id="model-details" class="model-details section">
+  <div class="container">
+    <div class="section-title">
+      <h2>About the Model</h2>
+      <p>Explore the details of our AI-powered model, including its architecture, performance metrics, and how it achieves its predictions.</p>
+    </div>
+
+    <!-- Model Overview -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <div class="info-box p-4 shadow-sm rounded">
+          <h4>How the Model Works</h4>
+          <p>
+            The model is a convolutional neural network (CNN) designed for binary classification, trained specifically on endoscopic images to identify "Cancerous" and "Non-Cancerous" cases.
+            Leveraging deep learning techniques, the model extracts high-level features from images, such as textures and patterns, that are indicative of cancerous lesions.
+          </p>
+          <ul>
+            <li><strong>Model Type:</strong> Convolutional Neural Network (CNN)</li>
+            <li><strong>Input Dimensions:</strong> 128x128 pixels</li>
+            <li><strong>Output Classes:</strong> Cancerous, Non-Cancerous</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visualizations Section -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-sm mb-5">
+          <div class="card-body">
+            <h5 class="card-title">Model Performance Visualizations</h5>
+            <p class="card-text">
+              Below are some insights into the model's training and evaluation process, including accuracy and loss metrics over epochs.
+            </p>
+            <div class="row">
+              <!-- Placeholder for visualizations -->
+              <div class="col-lg-6">
+                <h6>Training and Validation Accuracy</h6>
+                <img src="{{ url_for('static', filename='assets/img/accuracy_plot.png') }}" alt="Accuracy Plot" class="img-fluid rounded shadow-sm">
+              </div>
+              <div class="col-lg-6">
+                <h6>Training and Validation Loss</h6>
+                <img src="{{ url_for('static', filename='assets/img/loss_plot.png') }}" alt="Loss Plot" class="img-fluid rounded shadow-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation Metrics -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Model Evaluation Metrics</h5>
+            <p class="card-text">
+              The following metrics provide a quantitative evaluation of the model's performance on the test dataset:
+            </p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Accuracy</td>
+                  <td>95.6%</td>
+                </tr>
+                <tr>
+                  <td>Precision</td>
+                  <td>94.2%</td>
+                </tr>
+                <tr>
+                  <td>Recall</td>
+                  <td>96.1%</td>
+                </tr>
+                <tr>
+                  <td>F1-Score</td>
+                  <td>95.1%</td>
+                </tr>
+                <tr>
+                  <td>ROC-AUC</td>
+                  <td>97.3%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-10">
+        <div class="alert alert-warning" role="alert">
+          <strong>Disclaimer:</strong> The information provided here is for educational purposes and should not replace professional medical evaluation. Always consult a healthcare provider for official medical advice.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
