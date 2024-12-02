@@ -18,15 +18,15 @@ The Early Gastric Cancer Detection System leverages a machine learning pipeline 
 ```
 Project_name/
 ├── README.md          # Documentation
-├── notebook/          # Jupyter Notebooks for experimentation
+├── notebook/          # Jupyter Notebooks for initial model
 │   └── refined_model_Daniel_Ndungu_Summative_Assignment.ipynb
-├── src/               # Core functionality
+├── src/              
 │   ├── preprocessing.py  # Image preprocessing utilities
 │   ├── model.py          # ML model definition and training logic
 │   └── prediction.py     # Model inference and prediction
 ├── data/              # Dataset directory
-│   ├── cancerous/             # Training images
-│   └── non-cancerous/              # Test images
+│   ├── cancerous/             
+│   └── non-cancerous/             
 ├── models/            # Trained model storage
 │   ├── refined_2.keras   
 │   └── vanilla_model.keras    
