@@ -122,6 +122,10 @@ Explore the live project deployed on Microsoft Azure: [Early Gastric Cancer Dete
 Click below to watch the full walkthrough of the system:
 [Link to Youtube Video Live Demo](https://youtu.be/kIsQD86w0-o)
 
+## Link to Frontend Repository
+
+[Early Gastric Cancer Model Frontend Repo](https://github.com/Mwangi-dan/early_gastric_cancer_detection-flask)
+
 ## Future Improvements
 
 - **Optimization**: Improve training speed and reduce memory usage.
