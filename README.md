@@ -51,7 +51,7 @@ cd early-gastric-cancer-detection_MLOP_Summative
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate 
 ```
 
 ### Step 3: Install Dependencies
