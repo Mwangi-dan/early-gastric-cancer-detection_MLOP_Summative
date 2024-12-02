@@ -3,6 +3,8 @@
 
 The Early Gastric Cancer Detection System leverages a machine learning pipeline to assist healthcare professionals in predicting whether endoscopic images indicate the presence of cancerous lesions. This project includes a web-based FastAPI backend for prediction and model training and is built with a focus on scalability, accuracy, and user accessibility.
 
+![Early Gastric Cancer Detection](./readme_images/egcd-homepage.png)
+
 ## Features
 
 - **Image Classification**: Predicts if an uploaded endoscopic image indicates gastric cancer.
